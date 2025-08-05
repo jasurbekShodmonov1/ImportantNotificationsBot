@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: TelegramNotificationBot
+
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_SERVER:localhost:5432/important_notifications_bot}
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:jasur1803}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+telegram:
+  enabled: true
+  bot:
+    username: important_notifications1_bot
+    token: 8270372806:AAFVRQ30GofyBRZ9LImlScyMvpD3P4-oRxM
+
+logging:
+  level:
+    root: INFO
